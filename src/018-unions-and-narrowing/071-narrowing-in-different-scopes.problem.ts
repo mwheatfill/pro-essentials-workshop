@@ -8,13 +8,13 @@ const findUsersByName = (
     name: string;
   }[],
 ) => {
-  if (searchParams.name) {
-    return users.filter((user) => user.name.includes(searchParams.name));
+  const searchParamsName = searchParams.name
+  if (searchParamsName) {
+    return users.filter((user) => user.name.includes(searchParamsName));
   }
 
   return users;
 };
-
 it("Should find the exact name", () => {
   const result = findUsersByName(
     {
