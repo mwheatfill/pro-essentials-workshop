@@ -5,7 +5,6 @@ interface UserPart {
 };
 
 interface UserPart2 {
-  id: number;
   phone: string;
 };
 
