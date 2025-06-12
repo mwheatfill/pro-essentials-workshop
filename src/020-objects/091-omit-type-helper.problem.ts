@@ -5,7 +5,9 @@ interface Product {
   description: string;
 }
 
-const addProduct = (productInfo: Product) => {
+type AddProduct = Omit<Product, "id">;
+
+const addProduct = (productInfo: AddProduct) => {
   // Do something with the productInfo
 };
 
